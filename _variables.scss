@@ -29,21 +29,28 @@ $main-bg-color: #1445b3;
 
 /* SECTION */
 
+$p-color: #444;
+$p-font: 'Open Sans', sans-serif;
+$p-font-size: 15px;
+$p-font-weight: 400;
+$p-line-height: 1.5;
+
 $h2-color: #283d50;
 $h2-font: 'Montserrat', sans-serif;
 $h2-font-size: 36px;
 $h2-font-weight: 500;
+
+$h3-color: #212529;
+$h3-font: 'Open Sans', sans-serif;
+$h3-font-size: 15px;
+$h3-font-weight: 400;
+$h3-line-height: 1.5;
 
 $h4-color: #556877;
 $h4-font: 'Open Sans', sans-serif;
 $h4-font-size: 15px;
 $h4-font-weight: 400;
 $h4-line-height: 1.5;
-
-$section-h3-color: #212529;
-
-$section-p-color: #212529;
-
 
 $menu-font-size: 14px;
 $menu-font-weight: 500;
@@ -69,3 +76,10 @@ $choose-h2-color: #fff;
 
 /* FOOTER */
 
+$footer-color: #eee;
+$footer-bg-color: #004a99;
+$footer-font: 'Open Sans', sans-serif;
+$footer-font-size: 14px;
+$footer-font-weight: 400;
+$footer-line-height: 1.5;
+$footer-hover: #007bff;
