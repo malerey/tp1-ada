@@ -194,6 +194,45 @@ main {
   main .bg-img {
     padding: 10px 5%; } }
 
+/* --- ABOUT US --- */
+.about {
+  height: 100%;
+  padding: 20px 10%; }
+  .about .titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .about .titulo h2 {
+      margin-top: 80px;
+      color: #283d50;
+      font-family: "Montserrat", sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 20px; }
+    .about .titulo h4 {
+      color: #556877;
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      height: 45px;
+      width: 460px; }
+  .about .info-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .about .info-columns .info-col-1 {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+    .about .info-columns .info-col-2 {
+      width: 50%; }
+      .about .info-columns .info-col-2 img {
+        width: 100%; }
+
 /*
 .ft-columns {
     color: #ffffff;
