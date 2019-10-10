@@ -31,6 +31,7 @@ footer {
 /* ---  HEADER --- */
 header {
   position: fixed;
+  z-index: 2;
   height: 80px;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3); }
   header nav {
@@ -248,7 +249,7 @@ main {
     justify-content: center;
     align-items: center; }
     .about .titulo h2 {
-      margin-top: 6   0px;
+      margin-top: 60px;
       color: #283d50;
       font-family: "Montserrat", sans-serif;
       font-size: 36px;
@@ -356,6 +357,99 @@ main {
     .about .info-columns-mid .info-col-img {
       width: 100%; } }
 
+/* --- SERVICES --- */
+.services {
+  height: 100%;
+  padding: 20px 10%;
+  padding-bottom: 80px;
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  background-color: #ecf5ff; }
+  .services .titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .services .titulo h2 {
+      margin-top: 60px;
+      color: #283d50;
+      font-family: "Montserrat", sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 20px; }
+    .services .titulo p {
+      color: #556877;
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      height: 45px;
+      width: 460px; }
+  .services .wc-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    .services .wc-container .whitecards {
+      background-color: #fff;
+      width: 330px;
+      height: 200px;
+      padding: 30px;
+      margin: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      transition: all 0.5s; }
+      .services .wc-container .whitecards .wc-1, .services .wc-container .whitecards .wc-2, .services .wc-container .whitecards .wc-3, .services .wc-container .whitecards .wc-4, .services .wc-container .whitecards .wc-5, .services .wc-container .whitecards .wc-6 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 40px; }
+        .services .wc-container .whitecards .wc-1 img, .services .wc-container .whitecards .wc-2 img, .services .wc-container .whitecards .wc-3 img, .services .wc-container .whitecards .wc-4 img, .services .wc-container .whitecards .wc-5 img, .services .wc-container .whitecards .wc-6 img {
+          width: 64px;
+          height: 64px;
+          position: relative;
+          right: 35px; }
+      .services .wc-container .whitecards .data-paragraph {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+        width: 370px;
+        margin-left: 15px; }
+        .services .wc-container .whitecards .data-paragraph h4 {
+          color: #000;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 1.5;
+          margin: 0; }
+        .services .wc-container .whitecards .data-paragraph h4:hover {
+          color: #007bff; }
+        .services .wc-container .whitecards .data-paragraph p {
+          color: #444;
+          font-family: "Open Sans", sans-serif;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 1.5;
+          margin-top: 5px; }
+        .services .wc-container .whitecards .data-paragraph a {
+          text-decoration: none;
+          color: #007bff;
+          transition: 0.5s; }
+    .services .wc-container .whitecards:hover {
+      transform: translateY(-10px);
+      transition: all 0.5s; }
+
+@media (max-width: 1000px) and (min-width: 800px) {
+  .services {
+    padding: 10px 5%; } }
+
 /* --- FOOTER --- */
 .footer-1 {
   padding: 60px 10%;
@@ -454,7 +548,7 @@ main {
       padding: 0 15px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: space-between;
       flex-basis: 35%;
       flex-shrink: 1; }
       .footer-1 .footer-columns .ft-col-4 h4 {
@@ -465,7 +559,7 @@ main {
         height: 200px; }
       .footer-1 .footer-columns .ft-col-4 form .subscribe {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         margin-top: 15px; }
         .footer-1 .footer-columns .ft-col-4 form .subscribe .email-form {
           height: 36px;
@@ -492,20 +586,22 @@ main {
       flex-wrap: wrap;
       justify-content: space-between; }
       .footer-1 .footer-columns .ft-col-1 {
-        height: 200px;
+        height: 300px;
         flex-basis: 40%; }
       .footer-1 .footer-columns .ft-col-2 {
-        height: 200px;
+        height: 300px;
         flex-basis: 40%; }
       .footer-1 .footer-columns .ft-col-3 {
+        height: 300px;
         margin-top: 40px;
         flex-basis: 40%; }
         .footer-1 .footer-columns .ft-col-3 div p {
-          height: 120px; }
+          height: 100%; }
         .footer-1 .footer-columns .ft-col-3 .icons {
           margin-top: 5px;
           justify-content: flex-start; }
       .footer-1 .footer-columns .ft-col-4 {
+        height: 300px;
         margin-top: 40px;
         flex-basis: 40%; }
         .footer-1 .footer-columns .ft-col-4 p {
@@ -514,27 +610,39 @@ main {
           margin-top: 5px; } }
 
 @media (max-width: 600px) {
-  .footer-columns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; }
-    .footer-columns .ft-col-1 {
-      flex-basis: 100%;
-      margin: 0 20px; }
-    .footer-columns .ft-col-2 {
-      flex-basis: 40%;
-      margin: 20px 20px; }
-    .footer-columns .ft-col-3 {
-      flex-basis: 40%;
-      margin: 20px 20px; }
-      .footer-columns .ft-col-3 .icons {
-        margin-top: 15px;
-        display: flex;
-        justify-content: flex-start; }
-    .footer-columns .ft-col-4 {
-      flex-basis: 100%;
-      margin-left: 20px;
-      margin-right: 20px; } }
+  .footer-1 {
+    padding: 30px 5%; }
+    .footer-1 .footer-columns {
+      display: flex;
+      flex-wrap: wrap; }
+      .footer-1 .footer-columns .ft-col-1 {
+        flex-basis: 100%;
+        margin: 10px 5px;
+        padding-bottom: 15px; }
+        .footer-1 .footer-columns .ft-col-1 p {
+          height: 100%; }
+      .footer-1 .footer-columns .ft-col-2 {
+        flex-basis: 40%;
+        margin: 10px 5px;
+        padding-bottom: 15px;
+        height: 100%; }
+      .footer-1 .footer-columns .ft-col-3 {
+        flex-basis: 40%;
+        margin: 10px 5px;
+        padding-bottom: 15px;
+        height: 100%; }
+        .footer-1 .footer-columns .ft-col-3 div p {
+          height: 100%; }
+        .footer-1 .footer-columns .ft-col-3 .icons {
+          margin-top: 15px;
+          display: flex;
+          justify-content: flex-start; }
+      .footer-1 .footer-columns .ft-col-4 {
+        flex-basis: 100%;
+        margin: 10px 5px;
+        padding-bottom: 15px; }
+        .footer-1 .footer-columns .ft-col-4 div p {
+          height: 100%; } }
 
 .copyright {
   color: #eee;

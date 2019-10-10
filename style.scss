@@ -37,6 +37,7 @@ footer {
 
 header {
     position: fixed;
+    z-index: 2;
     height: 80px;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
         nav {
@@ -320,7 +321,7 @@ main {
             justify-content: center;
             align-items: center;
                 h2 {
-                    margin-top: 6   0px;
+                    margin-top: 60px;
                     color: $h2-color;
                     font-family: $h2-font;
                     font-size: $h2-font-size;
@@ -427,7 +428,7 @@ main {
 }
 
 @media (max-width: 1000px) {
-    .about{
+    .about {
         .info-columns {
             display: flex;
             flex-direction: column-reverse;
@@ -454,6 +455,116 @@ main {
                     width: 100%;
                 }
         }
+    }
+}
+
+/* --- SERVICES --- */
+
+.services {
+    height: 100%;
+    padding: 20px 10%;
+    padding-bottom: 80px;
+    box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    background-color: #ecf5ff;
+        .titulo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+                h2 {
+                    margin-top: 60px;
+                    color: $h2-color;
+                    font-family: $h2-font;
+                    font-size: $h2-font-size;
+                    font-weight: $h2-font-weight;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #556877;
+                    font-family: $p-font;
+                    font-size: $p-font-size;
+                    font-weight: $p-font-weight;
+                    line-height: $p-line-height;
+                    text-align: center;
+                    height: 45px;
+                    width: 460px;
+                }
+        }
+        .wc-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+                .whitecards {
+                    background-color: #fff;
+                    width: 330px;
+                    height: 200px;
+                    padding: 30px;
+                    margin: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    transition: all 0.5s;
+                        .wc-1, .wc-2, .wc-3, .wc-4, .wc-5, .wc-6 {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            width: 40px;
+                                img {
+                                    width: 64px;
+                                    height: 64px;
+                                    position: relative;
+                                    right: 35px;
+                                }
+                        }
+                        .data-paragraph {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            margin: 10px;
+                            width: 370px;
+                            margin-left: 15px;
+                                h4 {
+                                    color: #000;
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size:  18px;
+                                    font-weight: 700;
+                                    line-height: $h4-line-height;
+                                    margin: 0;
+                                }
+                                h4:hover {
+                                    color: #007bff;
+                                }
+                                p {
+                                    color: $p-color;
+                                    font-family: $p-font;
+                                    font-size: $p-font-size;
+                                    font-weight: $p-font-weight;
+                                    line-height: $p-line-height;
+                                    margin-top: 5px;
+                                }
+                                a {
+                                    text-decoration: none;
+                                    color: #007bff;
+                                    transition: 0.5s;
+                                }
+                        }
+                }
+                .whitecards:hover {
+                    transform: translateY(-10px);
+                    transition: all 0.5s;
+                }
+        }
+}
+
+@media (max-width: 1000px) and (min-width: 800px) {
+    .services {
+        padding: 10px 5%;
     }
 }
 
@@ -579,7 +690,7 @@ main {
                     padding: 0 15px;
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-start;
+                    justify-content: space-between;
                     flex-basis: 35%;
                     flex-shrink: 1;
                         h4 {
@@ -592,7 +703,7 @@ main {
                             }
                         form .subscribe {
                             display: flex;
-                            justify-content: flex-start;
+                            justify-content: space-between;
                             margin-top: 15px;
                                 .email-form {
                                     height: 36px;
@@ -627,19 +738,20 @@ main {
                 flex-wrap: wrap;
                 justify-content: space-between;
                     .ft-col-1 {
-                        height: 200px;
+                        height: 300px;
                         flex-basis: 40%;
                     }
                     .ft-col-2 {
-                        height: 200px;
+                        height: 300px;
                         flex-basis: 40%;
                     }
                     .ft-col-3 {
+                        height: 300px;
                         margin-top: 40px;
                         flex-basis: 40%;
                             div {
                                 p {
-                                    height: 120px;
+                                    height: 100%;
                                 }
                             }
                             .icons {
@@ -648,6 +760,7 @@ main {
                             }
                     }
                     .ft-col-4 {
+                        height: 300px;
                         margin-top: 40px;
                         flex-basis: 40%;
                             p {
@@ -662,31 +775,51 @@ main {
 }
 
 @media (max-width: 600px) {
-    .footer-columns {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-            .ft-col-1 {
-                flex-basis: 100%;
-                margin: 0 20px;
-            }
-            .ft-col-2 {
-                flex-basis: 40%;
-                margin: 20px 20px;
-            }
-            .ft-col-3 {
-                flex-basis: 40%;
-                margin: 20px 20px;
-                    .icons {
-                        margin-top: 15px;
-                        display: flex;
-                        justify-content: flex-start;
+    .footer-1 {
+        padding: 30px 5%;
+            .footer-columns {
+                display: flex;
+                flex-wrap: wrap;
+                    .ft-col-1 {
+                        flex-basis: 100%;
+                        margin: 10px 5px;
+                        padding-bottom: 15px;
+                            p {
+                                height: 100%;
+                            }
                     }
-            }
-            .ft-col-4 {
-                flex-basis: 100%;
-                margin-left: 20px;
-                margin-right: 20px;
+                    .ft-col-2 {
+                        flex-basis: 40%;
+                        margin: 10px 5px;
+                        padding-bottom: 15px;
+                        height: 100%;
+                    }
+                    .ft-col-3 {
+                        flex-basis: 40%;
+                        margin: 10px 5px;
+                        padding-bottom: 15px;
+                        height: 100%;
+                            div {    
+                                p {
+                                    height: 100%;
+                                }
+                            }
+                            .icons {
+                                margin-top: 15px;
+                                display: flex;
+                                justify-content: flex-start;
+                            }
+                    }
+                    .ft-col-4 {
+                        flex-basis: 100%;
+                        margin: 10px 5px;
+                        padding-bottom: 15px;
+                            div {
+                                p {
+                                    height: 100%;
+                                }
+                            }
+                    }
             }
     }
 }
