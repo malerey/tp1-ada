@@ -1051,13 +1051,10 @@ main {
   #contact-container {
     font-family: $cnt-font;
     display: flex;
-    flex-direction: column;
     width: 100%;
     height: auto;
     padding: 0 24px;
     #contact-map {
-      display: flex;
-      flex-direction: column;
       margin-bottom: 20px;
       width: 100%;
       height: auto;
@@ -1194,11 +1191,15 @@ main {
     }
 
     #contact-container {
+      flex-direction: column;
+      flex-wrap: wrap;
       font-family: $cnt-font;
       width: 100%;
       height: auto;
 
       #contact-map {
+        display: flex;
+        flex-direction: column;
         flex: 0 0 100%;
         max-width: 100%;
         iframe {
@@ -1208,7 +1209,6 @@ main {
       }
       .contact-information {
         display: row;
-        justify-content: space-between;
         width: 100%;
         height: auto;
         font-family: $cnt-font;
@@ -1216,6 +1216,7 @@ main {
         .contact-details {
           margin-top: 20px;
           display: flex;
+          justify-content: space-between;
           padding: 0 15px;
           margin-top: 20px;
           i {
@@ -1228,7 +1229,7 @@ main {
             padding: 0 0 10px 36px;
             line-height: 28px;
             font-size: 15px;
-            margin: 0 0 5px 0;
+            margin: 0 0 30px; 
           }
         }
         #contact_form_main {
@@ -1242,7 +1243,6 @@ main {
 
           .first_cnt,
           .second_cnt {
-            display: block;
             width: 100%;
             height: auto;
             border: 0px;
@@ -1250,16 +1250,14 @@ main {
           }
           #nombre_cnt,
           #email_cnt {
-            display: block;
             width: 100%;
             height: auto;
             padding: 6px 12px;
             border: 1px solid $cnt_border;
-            margin: 18px 5px;
+            margin: 12px 5px;
             line-height: 1.5;
           }
           #subject_cnt {
-            display: block;
             width: 100%;
             height: auto;
             border: 1px solid $cnt_border;
@@ -1268,11 +1266,8 @@ main {
             padding: 6px 12px;
           }
           .third_cnt {
-            display: block;
             width: 100%;
             #textarea_cnt {
-              display: block;
-              top: 10px;
               font-size: 14px;
               padding: 0;
               width: 100%;
@@ -1294,8 +1289,7 @@ main {
 
   .button_cnt {
     position: relative;
-    bottom: 5px;
-    right: 150px;
+    right: 300px;
     border: none;
     button[type="submit"] {
       font-family: $cnt-font;
@@ -1305,7 +1299,7 @@ main {
       background: $cnt-color-1;
       border: 0;
       border-radius: 20px;
-      /*padding: 8px 30px;*/
+      padding: 8px 30px;
       color: #fff;
       transition: 0.3s;
     }
@@ -1315,7 +1309,7 @@ main {
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   #contact_us {
     box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
     background-color: #ecf5ff;
@@ -1338,11 +1332,15 @@ main {
     }
 
     #contact-container {
+      display: flex;
+      flex-wrap: wrap;
       font-family: $cnt-font;
       width: 100%;
       height: auto;
 
       #contact-map {
+        display: flex;
+        flex-direction: column;
         flex: 0 0 100%;
         max-width: 100%;
         iframe {
@@ -1351,15 +1349,15 @@ main {
         }
       }
       .contact-information {
-        display: row;
-        justify-content: space-between;
-        width: 100%;
+         width: 100%;
         height: auto;
         font-family: $cnt-font;
 
         .contact-details {
-          margin-top: 20px;
           display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-top: 40px;
           padding: 0 15px;
           margin-top: 20px;
           i {
@@ -1369,10 +1367,11 @@ main {
             line-height: 1;
           }
           p {
+            
             padding: 0 0 10px 36px;
             line-height: 28px;
             font-size: 15px;
-            margin: 0 0 5px 0;
+            margin: 0 0 30px;
           }
         }
         #contact_form_main {
@@ -1439,7 +1438,7 @@ main {
   .button_cnt {
     position: relative;
     bottom: 5px;
-    right: 150px;
+    right: 300px;
     border: none;
     button[type="submit"] {
       font-family: $cnt-font;
@@ -1449,7 +1448,7 @@ main {
       background: $cnt-color-1;
       border: 0;
       border-radius: 20px;
-      /*padding: 8px 30px;*/
+      padding: 8px 30px;
       color: #fff;
       transition: 0.3s;
     }
