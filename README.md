@@ -3,7 +3,10 @@ TP 1 - ADA REMOTAS
 
 Integrantes
 
-Florencia Pezcara
-Agostona Spadaro
-Guadalupe Iturralde
+Florencia Pezcara;
+
+Agostina Spadaro;
+
+Guadalupe Iturralde;
+
 Florencia Guzzi
