@@ -1037,6 +1037,9 @@ main .bg-img .main-img img {
 .team .team-section-header {
   text-align: center;
   padding: 40px 0 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .team .team-section-header h2 {
   font-size: 36px;
@@ -1049,6 +1052,7 @@ main .bg-img .main-img img {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   line-height: 1.5;
+  width: 50%;
 }
 .team .team-img-container {
   display: flex;
@@ -1626,7 +1630,7 @@ main .bg-img .main-img img {
   }
   #contact_us #contact-container .contact-information .button_cnt {
     position: relative;
-    left: 150px;
+    left: 0;
     border: none;
   }
   #contact_us #contact-container .contact-information .button_cnt button[type=submit] {

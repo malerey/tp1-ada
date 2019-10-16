@@ -1126,6 +1126,9 @@ main {
 	.team-section-header {
 		text-align: center;
 		padding: 40px 0 70px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 			h2 {
 				font-size: 36px;
 				font-weight: 500;
@@ -1137,6 +1140,7 @@ main {
 				font-family: "Open Sans", sans-serif;
 				font-size: 15px;
 				line-height: 1.5;
+				width: 50%;
 			}
 	}
   	.team-img-container {
@@ -1771,7 +1775,7 @@ main {
         }
         .button_cnt {
           position: relative;
-          left: 150px;
+          left: 0;
           border: none;
           button[type="submit"] {
             font-family: $cnt-font;
