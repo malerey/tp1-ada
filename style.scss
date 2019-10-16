@@ -1074,6 +1074,27 @@ main {
     }
   }
 }
+
+/* --- CLIENTS --- */
+#clients_container {
+  width: 100%;
+  height: auto;
+  .clients_imgs {
+    display: flex;
+    flex-direction: column;
+    .client-logo {
+      display: inline-block;
+        }
+    img {
+      transition: all 0.4s ease-in-out;
+      height: auto;
+      width: 200px;
+      display: inline-block;
+      margin: 20px;
+    }
+  }
+}
+
 /* --- CONTACT US --- */
 #contact_us {
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
