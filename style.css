@@ -568,6 +568,10 @@ main .bg-img .main-img img {
   .services .wc-container .whitecards .data-paragraph {
     margin-left: 5px;
   }
+
+  .wc-container .whitecards {
+    height: 100%;
+  }
 }
 /* --- CHOOSE --- */
 .choose {
@@ -1279,24 +1283,24 @@ main .bg-img .main-img img {
     font-size: 15px;
     margin: 0 0 30px;
   }
-  #contact_us #contact-container .contact-information #contact_form_main {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main {
     width: 100%;
     height: auto;
   }
-  #contact_us #contact-container .contact-information #contact_form_main fieldset {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main fieldset {
     border: none;
     padding: 0;
     margin: 0;
   }
-  #contact_us #contact-container .contact-information #contact_form_main .first_cnt,
-#contact_us #contact-container .contact-information #contact_form_main .second_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main .first_cnt,
+#contact_us #contact-container .contact-information .contact-form #contact_form_main .second_cnt {
     width: 100%;
     height: auto;
     border: 0px;
     font-family: "Open Sans", sans-serif;
   }
-  #contact_us #contact-container .contact-information #contact_form_main #nombre_cnt,
-#contact_us #contact-container .contact-information #contact_form_main #email_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main #nombre_cnt,
+#contact_us #contact-container .contact-information .contact-form #contact_form_main #email_cnt {
     width: 100%;
     height: auto;
     padding: 6px 12px;
@@ -1304,7 +1308,7 @@ main .bg-img .main-img img {
     margin: 12px 5px;
     line-height: 1.5;
   }
-  #contact_us #contact-container .contact-information #contact_form_main #subject_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main #subject_cnt {
     width: 100%;
     height: auto;
     border: 1px solid #ced4da;
@@ -1312,10 +1316,10 @@ main .bg-img .main-img img {
     line-height: 1.5;
     padding: 6px 12px;
   }
-  #contact_us #contact-container .contact-information #contact_form_main .third_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main .third_cnt {
     width: 100%;
   }
-  #contact_us #contact-container .contact-information #contact_form_main .third_cnt #textarea_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main .third_cnt #textarea_cnt {
     font-size: 14px;
     padding: 0;
     width: 100%;
@@ -1325,17 +1329,16 @@ main .bg-img .main-img img {
     padding: 6px 8px;
     line-height: 1.5;
   }
-  #contact_us #contact-container .contact-information #contact_form_main .third_cnt #textarea_cnt #textarea_cnt::placeholder {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main .third_cnt #textarea_cnt #textarea_cnt::placeholder {
     font-family: "Open Sans", sans-serif;
     color: #495057;
   }
-
-  .button_cnt {
-    position: relative;
-    right: 300px;
+  #contact_us #contact-container .contact-information .button_cnt {
+    position: absolute;
+    left: 320px;
     border: none;
   }
-  .button_cnt button[type=submit] {
+  #contact_us #contact-container .contact-information .button_cnt button[type=submit] {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -1347,7 +1350,7 @@ main .bg-img .main-img img {
     color: #fff;
     transition: 0.3s;
   }
-  .button_cnt button[type=submit]:hover {
+  #contact_us #contact-container .contact-information .button_cnt button[type=submit]:hover {
     background-color: #004a99;
   }
 }
@@ -1414,25 +1417,25 @@ main .bg-img .main-img img {
     font-size: 15px;
     margin: 0 0 30px;
   }
-  #contact_us #contact-container .contact-information #contact_form_main {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main {
     width: 100%;
     height: auto;
   }
-  #contact_us #contact-container .contact-information #contact_form_main fieldset {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main fieldset {
     border: none;
     padding: 0;
     margin: 0;
   }
-  #contact_us #contact-container .contact-information #contact_form_main .first_cnt,
-#contact_us #contact-container .contact-information #contact_form_main .second_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main .first_cnt,
+#contact_us #contact-container .contact-information .contact-form #contact_form_main .second_cnt {
     display: block;
     width: 100%;
     height: auto;
     border: 0px;
     font-family: "Open Sans", sans-serif;
   }
-  #contact_us #contact-container .contact-information #contact_form_main #nombre_cnt,
-#contact_us #contact-container .contact-information #contact_form_main #email_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main #nombre_cnt,
+#contact_us #contact-container .contact-information .contact-form #contact_form_main #email_cnt {
     display: block;
     width: 100%;
     height: auto;
@@ -1441,7 +1444,7 @@ main .bg-img .main-img img {
     margin: 18px 5px;
     line-height: 1.5;
   }
-  #contact_us #contact-container .contact-information #contact_form_main #subject_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main #subject_cnt {
     display: block;
     width: 100%;
     height: auto;
@@ -1450,11 +1453,11 @@ main .bg-img .main-img img {
     line-height: 1.5;
     padding: 6px 12px;
   }
-  #contact_us #contact-container .contact-information #contact_form_main .third_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main .third_cnt {
     display: block;
     width: 100%;
   }
-  #contact_us #contact-container .contact-information #contact_form_main .third_cnt #textarea_cnt {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main .third_cnt #textarea_cnt {
     display: block;
     top: 10px;
     font-size: 14px;
@@ -1466,11 +1469,11 @@ main .bg-img .main-img img {
     padding: 6px 8px;
     line-height: 1.5;
   }
-  #contact_us #contact-container .contact-information #contact_form_main .third_cnt #textarea_cnt #textarea_cnt::placeholder {
+  #contact_us #contact-container .contact-information .contact-form #contact_form_main .third_cnt #textarea_cnt #textarea_cnt::placeholder {
     font-family: "Open Sans", sans-serif;
     color: #495057;
   }
-  #contact_us #contact-container .contact-information .button_cnt {
+  #contact_us #contact-container .contact-information .contact-form .button_cnt {
     display: flex;
     justify-content: center;
     position: relative;
