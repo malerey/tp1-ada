@@ -1,12 +1,20 @@
+
+
 /* --- FONTS --- */
 
 @import "_fonts";
+
+
 
 /* --- SCSS --- */
 
 @import "_variables";
 
+
+
 /* --- CSS --- */
+
+
 
 body {
   margin: 0;
@@ -15,6 +23,7 @@ body {
 * {
   box-sizing: border-box;
 }
+
 
 header,
 nav,
@@ -40,6 +49,8 @@ footer {
   background-color: #004a99;
 }
 
+
+
 /* ---  HEADER --- */
 
 header {
@@ -47,48 +58,60 @@ header {
   z-index: 2;
   height: 80px;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+
   nav {
     height: 100%;
     padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .logo {
+
       img {
         height: 25px;
       }
+
       .menu-icon {
         display: none;
+
         a {
           color: $menu-color;
           font-size: 20px;
         }
       }
+
       .menu-icon:target #menu-overlay {
         display: flex;
       }
     }
+
     .menu {
       font-family: $menu-font;
       font-size: $menu-font-size;
       font-weight: $menu-font-weight;
       width: 550px;
+
       ul {
         padding: 0;
         list-style: none;
         display: flex;
         justify-content: space-between;
+
         li {
+
           a {
             color: $menu-color;
             text-decoration: none;
           }
+
           a:hover {
             color: $menu-hover;
           }
         }
       }
     }
+
     .menu-overlay {
       background-color: $overlay-bg-color2;
       position: fixed;
@@ -100,6 +123,7 @@ header {
       visibility: hidden;
       opacity: 0;
       transition: all 0.5s;
+
       .overlay {
         background-color: $overlay-bg-color1;
         height: 100%;
@@ -113,8 +137,10 @@ header {
         margin: 0;
         list-style: none;
         transition: all 0.5s;
+     
         li {
           padding: 10px 20px;
+     
           a {
             color: $overlay-color;
             font-family: $overlay-font;
@@ -122,15 +148,18 @@ header {
             line-height: $overlay-line-height;
             text-decoration: none;
           }
+     
           a:hover {
             color: $overlay-hover;
           }
         }
       }
+     
       .close {
         position: absolute;
         top: 25px;
         right: 5%;
+     
         a {
           color: $overlay-color;
           font-size: 25px;
@@ -158,16 +187,20 @@ header {
 
 @media (max-width: 1000px) {
   header {
+  
     nav {
       padding: 10px 5%;
+  
       .logo {
         width: 100%;
         display: flex;
         justify-content: space-between;
+  
         .menu-icon {
           display: flex;
         }
       }
+  
       .menu {
         display: none;
       }
@@ -179,6 +212,7 @@ header {
 
 main {
   padding-top: 80px;
+ 
   .bg-img {
     padding: 20px 10%;
     background-image: url("images/main/intro-bg.png");
@@ -189,12 +223,14 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  
     div {
       margin-right: 40px;
       height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+  
       h1 {
         margin: 0;
         padding-bottom: 40px;
@@ -203,17 +239,20 @@ main {
         font-weight: $main-font-weight;
         color: $main-color;
         width: 450px;
+    
         .underline {
           color: #74b5fc;
           text-decoration: underline;
         }
       }
+    
       .buttons {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 330px;
         height: auto;
+    
         button {
           color: #fff;
           background-color: rgba(#007bff, 0.1);
@@ -226,11 +265,13 @@ main {
           font-weight: 600;
           text-align: center;
           transition: all 0.5s;
+    
           a {
             color: #fff;
             text-decoration: none;
           }
         }
+    
         button:hover {
           color: #fff;
           background-color: #007bff;
@@ -238,10 +279,12 @@ main {
         }
       }
     }
+    
     .main-img {
       margin: 0;
       display: flex;
       justify-content: center;
+    
       img {
         width: 440px;
         height: auto;
@@ -249,12 +292,14 @@ main {
     }
   }
 }
+
 .buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 330px;
   height: auto;
+
   button {
     color: #fff;
     background-color: rgba(#007bff, 0.1);
@@ -267,11 +312,13 @@ main {
     font-weight: 600;
     text-align: center;
     transition: all 0.5s;
+
     a {
       color: #fff;
       text-decoration: none;
     }
   }
+
   button:hover {
     color: #fff;
     background-color: #007bff;
@@ -283,6 +330,7 @@ main {
   margin: 0;
   display: flex;
   justify-content: center;
+
   img {
     width: 440px;
     height: auto;
@@ -291,21 +339,25 @@ main {
 
 @media (max-width: 1000px) and (min-width: 600px) {
   main {
+
     .bg-img {
       padding: 10px 5%;
       display: flex;
       flex-direction: column-reverse;
       background-size: 100% 740px;
       height: 100%;
+
       div {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 0;
+
         h1 {
           text-align: center;
         }
       }
+
       .main-img {
         display: flex;
         align-items: center;
@@ -316,47 +368,57 @@ main {
 
 @media (max-width: 600px) {
   main {
+
     .bg-img {
       display: flex;
       flex-direction: column-reverse;
       background-size: 100% 740px;
+      
       div {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 0;
+
         h1 {
           width: 90%;
           text-align: center;
           font-size: 36px;
           padding-bottom: 10px;
         }
+      
         .buttons {
           display: flex;
           flex-direction: column;
           margin-top: 5px;
+      
           button {
             margin: 5px;
           }
         }
       }
+      
       .main-img {
         display: flex;
         align-items: center;
       }
     }
+    
     .buttons {
       display: flex;
       flex-direction: column;
       margin-top: 5px;
+    
       button {
         margin: 5px;
       }
     }
   }
+  
   .main-img {
     display: flex;
     align-items: center;
+  
     img {
       width: 100%;
       height: auto;
@@ -667,6 +729,8 @@ main {
   }
 }
 
+
+
 /* --- CHOOSE --- */
 
 .choose {
@@ -817,6 +881,9 @@ main {
   }
 }
 
+
+
+
 /* --- PORTFOLIO --- */
 
 .portfolio {
@@ -942,6 +1009,9 @@ main {
     }
   }
 }
+
+
+
 
 /* --- TESTIMONIALS --- */
 
@@ -1074,6 +1144,88 @@ main {
     }
   }
 }
+
+
+
+
+/****************** CLIENTS ***************/
+
+#clients {
+  padding: 60px 0;
+  display: block;
+}
+
+.seccion-clients {
+  background-color: #ecf5ff;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  div {
+    display: block;
+  }
+
+  .container {
+
+    h2 { 
+      display: block;     
+      color: #283d50;      
+      text-align: center;
+      font-family: $font-titles;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 20px 0;
+      position: relative;
+    }
+
+    p {
+      text-align: center;
+      margin: auto;
+      font-size: 15px;      
+      padding-bottom: 60px;
+      color: #556877;
+      width: 50%;
+    }
+  }
+
+  
+  .box-clients {
+    border-top: 1px solid #d6eaff;
+    border-left: 1px solid #d6eaff;
+    margin-bottom: 30px;
+    display: flex;
+           
+    .box-img {
+      display: flex;
+      flex: 25%;     
+
+      .img-logo {
+        padding: 64px;
+        display: flex;   
+        justify-content: center;   
+        align-items: center;
+        border-right: 1px solid #d6eaff;
+        border-bottom: 1px solid #d6eaff;
+        overflow: hidden;
+        background: #fff;
+        height: 160px;
+
+        img {
+          transition: all 0.4s ease-in-out;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }  
+}
+
+
+
+
 /* --- CONTACT US --- */
 #contact_us {
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
@@ -1497,49 +1649,64 @@ main {
     }
   }
 }
+
+
+
+
 /*---------------------------TEAM-------------------------------*/
 
 @media (max-width: 600px) {
   .footer-1 {
     padding: 30px 5%;
+ 
     .footer-columns {
       display: flex;
       flex-wrap: wrap;
+ 
       .ft-col-1 {
         flex-basis: 100%;
         margin: 10px 5px;
         padding-bottom: 5px;
+ 
         p {
           height: 100%;
         }
       }
+ 
       .ft-col-2 {
         flex-basis: 100%;
         margin: 10px 5px;
         padding-bottom: 5px;
         height: 100%;
       }
+ 
       .ft-col-3 {
         flex-basis: 100%;
         margin: 10px 5px;
         padding-bottom: 5px;
         height: 100%;
+ 
         div {
+ 
           p {
             height: 100%;
           }
         }
+ 
         .icons {
           margin-top: 15px;
           display: flex;
           justify-content: flex-start;
         }
       }
+ 
       .ft-col-4 {
         flex-basis: 100%;
         margin: 10px 5px;
         padding-bottom: 5px;
+ 
         div {
+ 
           p {
             height: 100%;
           }
@@ -1547,18 +1714,23 @@ main {
       }
     }
   }
+ 
   .team-img:hover .team-overlay {
     transform: translateY(-250px);
   }
+ 
   #img1 {
     background-image: url("images/team-01.jpg");
   }
+ 
   #img2 {
     background-image: url("images/team-02.jpg");
   }
+ 
   #img3 {
     background-image: url("images/team-03.jpg");
   }
+ 
   #img4 {
     background-image: url("images/team-04.jpg");
   }
@@ -1566,6 +1738,7 @@ main {
 
 @media (max-width: 600px) {
   .team-row1,
+ 
   .team-row2 {
     flex-direction: column;
     align-items: center;
@@ -1578,13 +1751,20 @@ main {
 
 @media (max-width: 900px) {
   .team-row1,
+ 
   .team-row2 {
     flex: 100%;
     margin-bottom: 20px;
   }
 }
 
-/* --- FOOTER --- */
+
+
+
+
+
+
+/* ------------ FOOTER ------------- */
 
 .footer-1 {
   padding: 60px 10%;
@@ -1593,22 +1773,26 @@ main {
   font-size: $footer-font-size;
   font-weight: $footer-font-weight;
   line-height: $footer-line-height;
+
   .footer-columns {
     padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     height: 100%;
-    .ft-col-1 {
+
+    .ft-col-1 {      
       padding: 0 15px;
       font-family: "Montserrat", sans-serif;
       flex-basis: 35%;
       flex-shrink: 1;
+
       h1 {
         font-weight: $footer-font-weight;
         font-size: 35px;
         margin: 0;
       }
+     
       p {
         font-size: 13px;
         margin: 0;
@@ -1617,15 +1801,18 @@ main {
         height: 200px;
       }
     }
+    
     .ft-col-2 {
       padding: 0 15px;
       display: flex;
       flex-direction: column;
       flex-basis: 15%;
       flex-shrink: 0;
+    
       h4 {
         margin: 0;
       }
+    
       ul {
         margin: 0;
         padding: 35px 0;
@@ -1634,17 +1821,20 @@ main {
 
         li {
           line-height: $footer-line-height;
+    
           a {
             color: $footer-color;
             text-decoration: none;
             transition: color 0.5s;
           }
+    
           a:hover {
             color: #007bff;
           }
         }
       }
     }
+    
     .ft-col-3 {
       padding: 0 15px;
       display: flex;
@@ -1652,26 +1842,31 @@ main {
       justify-content: space-between;
       flex-basis: 15%;
       flex-shrink: 0;
+    
       div {
         display: flex;
         flex-direction: column;
+    
         h4 {
           margin: 0;
         }
+    
         p {
           margin-top: 35px;
           height: 200px;
-
+    
           span {
             font-weight: bold;
           }
         }
       }
+
       .icons {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         margin-top: 15px;
+
         .rrss {
           color: $footer-color;
           background-color: #007bff;
@@ -1683,24 +1878,29 @@ main {
           border-radius: 50%;
           margin-right: 4px;
           transition: all 0.5s;
+
           .fab {
             font-size: 15px;
           }
+
           a {
             color: $footer-color;
             text-decoration: none;
             transition: color 0.5s;
           }
+
           a:hover {
             color: $footer-color;
           }
         }
+
         .rrss:hover {
           color: #ffffff;
           background-color: #005dc0;
         }
       }
     }
+
     .ft-col-4 {
       padding: 0 15px;
       display: flex;
@@ -1708,22 +1908,27 @@ main {
       justify-content: space-between;
       flex-basis: 35%;
       flex-shrink: 1;
+
       h4 {
         margin: 0;
       }
+
       p {
         margin-top: 35px;
         line-height: $footer-line-height;
         height: 200px;
       }
+
       form .subscribe {
         display: flex;
         justify-content: space-between;
         margin-top: 15px;
+
         .email-form {
           height: 36px;
           width: 100%;
         }
+
         input[type="submit"] {
           color: #ffffff;
           background-color: #007bff;
@@ -1734,6 +1939,7 @@ main {
           border: 0;
           transition: all 0.5s;
         }
+
         input[type="submit"]:hover {
           color: #ffffff;
           background-color: #005dc0;
@@ -1746,40 +1952,50 @@ main {
 @media (max-width: 1000px) and (min-width: 600px) {
   .footer-1 {
     padding: 60px 5%;
+
     .footer-columns {
       padding: 10px 5%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      
       .ft-col-1 {
         height: 300px;
         flex-basis: 40%;
       }
+      
       .ft-col-2 {
         height: 300px;
         flex-basis: 40%;
       }
+      
       .ft-col-3 {
         height: 300px;
         margin-top: 40px;
         flex-basis: 40%;
+      
         div {
+      
           p {
             height: 100%;
           }
         }
+      
         .icons {
           margin-top: 5px;
           justify-content: flex-start;
         }
       }
+      
       .ft-col-4 {
         height: 300px;
         margin-top: 40px;
         flex-basis: 40%;
+      
         p {
           height: 120px;
         }
+      
         form .subscribe {
           margin-top: 5px;
         }
@@ -1791,29 +2007,36 @@ main {
 @media (max-width: 600px) {
   .footer-1 {
     padding: 30px 5%;
+    
     .footer-columns {
       display: flex;
       flex-wrap: wrap;
+    
       .ft-col-1 {
         flex-basis: 100%;
         margin: 10px 5px;
         padding-bottom: 15px;
+    
         p {
           height: 100%;
         }
       }
+    
       .ft-col-2 {
         flex-basis: 40%;
         margin: 10px 5px;
         padding-bottom: 15px;
         height: 100%;
       }
+    
       .ft-col-3 {
         flex-basis: 40%;
         margin: 10px 5px;
         padding-bottom: 15px;
         height: 100%;
+    
         div {
+    
           p {
             height: 100%;
           }
