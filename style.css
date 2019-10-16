@@ -1075,24 +1075,6 @@ main .bg-img .main-img img {
     align-items: center;
   }
 
-<<<<<<< HEAD
-/* --- CLIENTS --- */
-#clients_container {
-  width: 100%;
-  height: auto; }
-  #clients_container .clients_imgs {
-    display: flex;
-    flex-direction: column; }
-    #clients_container .clients_imgs .client-logo {
-      display: inline-block; }
-    #clients_container .clients_imgs img {
-      transition: all 0.4s ease-in-out;
-      height: auto;
-      width: 200px;
-      display: inline-block;
-      margin: 20px; }
-
-=======
   .team-img {
     margin-bottom: 20px;
   }
@@ -1104,7 +1086,25 @@ main .bg-img .main-img img {
   }
 }
 /* --- CLIENTS --- */
->>>>>>> 00bd5127967b8df9ed5b6726307e7c7a660bb162
+#clients_container {
+  width: 100%;
+  height: auto;
+}
+#clients_container .clients_imgs {
+  display: flex;
+  flex-direction: column;
+}
+#clients_container .clients_imgs .client-logo {
+  display: inline-block;
+}
+#clients_container .clients_imgs img {
+  transition: all 0.4s ease-in-out;
+  height: auto;
+  width: 200px;
+  display: inline-block;
+  margin: 20px;
+}
+
 /* --- CONTACT US --- */
 #contact_us {
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
