@@ -277,50 +277,6 @@ main {
   }
 }
 
-.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 330px;
-  height: auto;
-
-  button {
-    color: #fff;
-    background-color: rgba(#007bff, 0.1);
-    border: 2px solid #fff;
-    border-radius: 20px;
-    width: 150px;
-    height: 40px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    transition: all 0.5s;
-
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-
-  button:hover {
-    color: #fff;
-    background-color: #007bff;
-    border: 2px solid #007bff;
-  }
-}
-
-.main-img {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-
-  img {
-    width: 440px;
-    height: auto;
-  }
-}
-
 @media (max-width: 1000px) and (min-width: 600px) {
   main {
 
@@ -351,64 +307,51 @@ main {
 }
 
 @media (max-width: 600px) {
-  main {
+	main {
 
-    .bg-img {
-      display: flex;
-      flex-direction: column-reverse;
-      background-size: 100% 740px;
-      
-      div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 0;
+		.bg-img {
+		display: flex;
+		flex-direction: column-reverse;
+		background-size: 100% 740px;
+		
+		
+			div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 0;
+				height: none;
 
-        h1 {
-          width: 90%;
-          text-align: center;
-          font-size: 36px;
-          padding-bottom: 10px;
-        }
-      
-        .buttons {
-          display: flex;
-          flex-direction: column;
-          margin-top: 5px;
-      
-          button {
-            margin: 5px;
-          }
-        }
-      }
-      
-      .main-img {
-        display: flex;
-        align-items: center;
-      }
-    }
-    
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      margin-top: 5px;
-    
-      button {
-        margin: 5px;
-      }
-    }
-  }
-  
-  .main-img {
-    display: flex;
-    align-items: center;
-  
-    img {
-      width: 100%;
-      height: auto;
-      margin-top: 60px;
-    }
-  }
+				h1 {
+				width: 90%;
+				text-align: center;
+				font-size: 36px;
+				padding-bottom: 10px;
+				}
+			
+				.buttons {
+				display: flex;
+				flex-direction: column;
+				margin-top: 5px;
+			
+					button {
+						margin: 5px;
+					}
+				}
+			}
+		
+			.main-img {
+				margin: 0;
+				display: flex;
+				justify-content: center;
+			  
+				img {
+				  width: 100%;
+				  height: auto;
+				}
+			}
+		}
+	}
 }
 			
 /* --- ABOUT US --- */

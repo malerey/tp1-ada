@@ -236,46 +236,6 @@ main .bg-img .main-img img {
   height: auto;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 330px;
-  height: auto;
-}
-.buttons button {
-  color: #fff;
-  background-color: rgba(0, 123, 255, 0.1);
-  border: 2px solid #fff;
-  border-radius: 20px;
-  width: 150px;
-  height: 40px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.5s;
-}
-.buttons button a {
-  color: #fff;
-  text-decoration: none;
-}
-.buttons button:hover {
-  color: #fff;
-  background-color: #007bff;
-  border: 2px solid #007bff;
-}
-
-.main-img {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-.main-img img {
-  width: 440px;
-  height: auto;
-}
-
 @media (max-width: 1000px) and (min-width: 600px) {
   main .bg-img {
     padding: 10px 5%;
@@ -309,6 +269,7 @@ main .bg-img .main-img img {
     justify-content: center;
     align-items: center;
     margin-right: 0;
+    height: none;
   }
   main .bg-img div h1 {
     width: 90%;
@@ -325,26 +286,13 @@ main .bg-img .main-img img {
     margin: 5px;
   }
   main .bg-img .main-img {
+    margin: 0;
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
-  main .buttons {
-    display: flex;
-    flex-direction: column;
-    margin-top: 5px;
-  }
-  main .buttons button {
-    margin: 5px;
-  }
-
-  .main-img {
-    display: flex;
-    align-items: center;
-  }
-  .main-img img {
+  main .bg-img .main-img img {
     width: 100%;
     height: auto;
-    margin-top: 60px;
   }
 }
 /* --- ABOUT US --- */
