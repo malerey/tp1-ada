@@ -6,6 +6,15 @@ $menu-font-weight: 500;
 $menu-color: #004289;
 $menu-color-hidden: rgba(0, 0, 0, 0.5);
 $menu-bg-color: #fff;
+
+// veo que aqui hay varias variables con el mismo valor. 
+// esta es una decision discutible - el punto de una variable
+// es repetir lo menos posible. Si en algun momento cambiamos 
+// el color de nuestra web, deberemos cambiar este color -007bff
+// en nueve lugares distintos!
+// Una mejor decision seria encontrar un nombre de variable que 
+// aplique a todos los usos de este color. 
+// Por ejemplo "link-color" o algo asi. 
 $menu-hover: #007bff;
 $menu-active: #007bff;
 $menu-target: #007bff;

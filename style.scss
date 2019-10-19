@@ -9,8 +9,16 @@
 
 /* --- CSS --- */
 
+
+/* Si aqui agregamos esta indicacion el scroll sera suave como en la web modelo
+html {
+  scroll-behavior: smooth;
+}
+*/
+
 body {
   margin: 0;
+
 }
 
 * {
@@ -20,10 +28,15 @@ body {
 header, nav, .about,
 .portfolio, .team, .contact {
   background-color: #ffffff;
+  // por que este width del 100% en tantos elementos?
+  // Por lo que veo, solo es necesario en header (porque los elementos fixed no
+  // ocupan el 100% de su contenedor), pero el resto de las secciones si lo hacen
+  // por defecto, como todos los divs. 
   width: 100%;
 }
 
 main, .choose {
+  // existiendo variables con estos colores, no tiene sentido no usarlas aqui 
   background-color: #004a99;
 }
 
@@ -95,6 +108,9 @@ header {
         }
       }
     }
+
+    // lo bello y prolijo de la animacion de este menu me EMOCIONA jaja 
+    // excelente trabajo 
 
     .menu-overlay {
       background-color: $overlay-bg-color2;
@@ -238,6 +254,13 @@ main {
         height: auto;
     
         button {
+          // noto que los botones no siguen el modelo. 
+          // les confieso que me gusta mas asi - pero 
+          // es una decision de diseño que no deberiamos 
+          // tomar nosotras como frontenders - nuestro
+          // trabajo es seguir el modelo que se nos indica, 
+          // y en todo caso dar nuestro feedback y proponer cambios
+          // si hay algo que no nos convence. 
           color: #fff;
           background-color: rgba(#007bff, 0.1);
           border: 2px solid #fff;
@@ -283,6 +306,7 @@ main {
     .bg-img {
       padding: 10px 5%;
       display: flex;
+      // buen uso de column reverse aca 
       flex-direction: column-reverse;
       background-size: 100% 740px;
       height: 100%;
@@ -310,6 +334,13 @@ main {
 	main {
 
 		.bg-img {
+      // esto lo note varias veces - repiten codigo innecesariamente en las media queries. 
+      // bg-img ya tiene display flex, column reverse y ese background size por el 
+      // estilo que le dimos mas arriba - no es necesario
+      // repetirlo en la media query, ya que hereda todos los estilos
+      // solo debemos poner en la media query lo que queremos cambiar o pisar. 
+      // recuerden, mientras menos reiterativo sea nuestro codigo, mejor. 
+      // el principio es DRY: dont repeat yourself 
 		display: flex;
 		flex-direction: column-reverse;
 		background-size: 100% 740px;
@@ -357,6 +388,7 @@ main {
 /* --- ABOUT US --- */
 
 .about {
+  // esta indicacion es innecesaria - el height de about esta dado por su contenido
   height: 100%;
   padding: 20px 10%;
   margin-bottom: 40px;
@@ -619,7 +651,15 @@ main {
 							}
 					}
 					.whitecards:hover {
-							transform: translateY(-10px);
+              transform: translateY(-10px);
+              // recuerden que el transition debe ir siempre en el elemento
+              // y nunca dentro del hover (porque en ese caso se aplica
+              // solo en el hover, y apenas sacamos el mouse del elemento
+              // deja de tener una transicion)
+              // En este caso no trae problemas porque whitecards ya tiene
+              // un transition, lo que hace que este sea innecesario. 
+              // Pero prueben dejar el transition solo en el hover y van a ver 
+              // que las cartas no se comportan como esperariamos. 
 							transition: all 0.5s;
 					}
 		}
@@ -634,7 +674,20 @@ main {
 @media (max-width: 600px) {
 	.services {
 		.titulo p {
-			width: 100%;
+      width: 100%;
+      // Iba a comentarles que este height me parecia innecesario y note que ya 
+      // habia hecho ese comentario muchas veces. 
+      // Asi que elimine *todos* los height: 100% de su codigo y... no cambió nada!
+      // Hay 25 veces en que se repite height: 100% de manera innecesaria. 
+      // Muy pocas veces usaremos height 100% ya que la altura de los elementos esta
+      // determinada por su contenido - y este siempre es del 100% de si mismo. 
+      // La unica vez en que se me ocurre que un height 100% sea necesario seria 
+      // si por ejemplo a un elemento le recortaramos su height deliberadamente y
+      // luego quisieramos que vuelva al 100% en una media query. Pero a esta p
+      // no le quitamos su height en el codigo de arriba, asi que no tiene sentido
+      // agregarlo aqui. 
+      // Tengan cuidado en general con agregar cosas solo porque parecen logicas
+      // sin probar si efectivamente se necesitan o no.  
 			height: 100%;
 		}
 		.wc-container .whitecards {
@@ -652,13 +705,20 @@ main {
 /* --- CHOOSE --- */
 
 .choose {
-  height: 100%;
+  height: 100%; // ಠ_ಠ
   padding: 20px 10%;
   padding-bottom: 80px;
   background-color: $choose-bg-color;
 		.titulo {
+      // ya van varias veces que me encuentro esta misma indicacion
+      // y es logico, ya que muchisimas veces queremos que las cosas esten
+      // en flex con todo centrado. 
+      // Este es un lugar ideal para un mixin!
 			display: flex;
-			flex-direction: column;
+      flex-direction: column;
+      // justo en este caso creo que el justfy center es innecesario 
+      // las cosas ya ocupan todo el espacio que pueden ocupar a lo alto, 
+      // asi que no tienen adonde moverse en ese eje 
 			justify-content: center;
 			align-items: center;
 				h2 {
@@ -684,7 +744,11 @@ main {
 			justify-content: center;
 			align-items: center;
 				.bluecards {
-					background-color: #00458f;
+          background-color: #00458f;
+          // cuando la indicacion de margen o padding vertical y horizontal son la misma, 
+          // privilegiemos escribirlo de manera resumida, asi:
+          // margin: 15px;
+          // padding: 15px;
 					margin: 15px 15px;
 					padding: 15px 15px;
 					text-align: center;
@@ -935,8 +999,14 @@ main {
 
 .testimonials {
   height: 100%;
+
+  // estos dos padding podrian resumirse en uno
+  // asi
+  // padding: 20px 10% 80px
+  // Cuando son tres, el primero refiere al top, el segundo a left y right, y el tercero al bottom
   padding: 20px 10%;
   padding-bottom: 80px;
+  
   box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
   background-color: #ecf5ff;
   display: flex;
@@ -1065,6 +1135,7 @@ main {
 
 /*--- TEAM ---*/
 
+
 .team {
 	.team-section-header {
 		text-align: center;
@@ -1103,6 +1174,20 @@ main {
 						border-radius: 50%;
 						background-size: 100%;
 							.team-overlay {
+                // Noto que aca se alejan un poco del modelo
+                // En el modelo, el color de fondo aparece y el texto parece moverse hacia arriba
+                // En su trabajo, tanto el fondo como el texto se mueven hacia arriba
+                // Si fue una decision de ustedes, no hay problema!
+                // Pero si lo hicieron asi porque no sabian como hacer que el color de fondo apareciera, 
+                // la idea es hacerlo con las propiedades 
+                // opacity: 0 y visibility: hidden
+                // Al hacer el hover en el fondo, le decimos
+                // opacity: 1 y visibility: visible 
+                // Y asi logramos que aparezca de manera animada
+                // (con display none no podriamos, porque display no es una propiedad animable)
+                // El texto deberia si tener la indicacion de moverse hacia arriba con 
+                // transform translate 
+                // Si quedan dudas sobre esto escribanme! 
 								display: flex;
 								flex-direction: column;
 								justify-content: center;
@@ -1191,6 +1276,11 @@ main {
 
 #clients {
   padding: 60px 0;
+  // me llamo la atencion este display block. No parece ser necesario
+  // Cuando fui a su web note que si lo sacaba, la seccion desaparecia
+  // Y ahi encontre el error: por un error de tipeo probablemente, 
+  // escribieron la etiqueta como "seccion" en lugar de "section". 
+  // HTML no sabia lo que era esa etiqueta, por eso se veia mal. 
   display: block;
 }
 

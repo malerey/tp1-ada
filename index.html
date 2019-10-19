@@ -1,3 +1,37 @@
+<!-- Observaciones generales sobre el trabajo:
+
+1. En general todo esta excelente. La organizacion del codigo, los buenos nombres de clase, 
+lo bien que se ve la web, el codigo responsive, las animaciones, el uso tan prolijo de scss!. 
+Es un trabajo enorme y muy bien hecho. Las felicito. 
+Espero que el trabajo haya cumplido su objetivo - sacarlas de la zona de confort, 
+obligarlas a poner en practica conceptos que pueden ser faciles en la clase y en un codigo sencillo
+pero que se complican en desarrollos mas complejos, y permitirles afianzar lo ya visto de manera teorica. 
+
+2. Mis observaciones apuntan a que sigan aprendiendo, no tanto a "corregir". 
+En ese sentido, quiza haya algunas cosas en las que no hicimos tanto enfasis en la clase
+pero que igual les comento para que puedan tenerlo en cuenta en futuros desarrollos o seguir explorando
+
+3. Ninguna imagen de su codigo tiene "alt". Recuerden que este atributo se agrega a las imagenes
+(por ejemplo <img class="logo" alt="Logo de Ada">) y permiten que los lectores de pantalla
+puedan describirle las imagenes a aquellas personas que por algun motivo no pueden verlas. Son
+absolutamente vitales para que nuestra web sea accesible. 
+
+4. Noto que no usaron ningun mixin - creo que les habrian servido para evitar codigo innecesario
+o repetitivo, por ejemplo para alinear cosas al centro con flex o darle estilo a los botones. 
+Mas alla de eso, si no lo agregaron porque les traia problemas o aun no se sienten seguras con ellos, 
+mas motivo para usarlos! Traten de incorporarlos a algun desarrollo, ya que se usan mucho y les 
+sera muy util aprenderlos y dominarlos. 
+
+5. Hay algunas secciones que no usan ninguna variable, o usan muy pocas. Es recomendable que
+si las variables estan, se usen siempre. Supongamos que en un momento queremos cambiar el color
+de nuestra pagina: un desarrollador que no este familiarizado con este codigo va a cambiar la variable y 
+creer que asi cambia todo lo que use ese color. Cuando descubra que no, no estara muy feliz de 
+tener que ir cambiando todos los lugares donde la variable no se usó a mano - 
+en una empresa, la persona que no haya usado variables estaría obligada a llevar facturas al día siguiente
+para ser perdonada por ese error :) .
+
+6. Dejo otras observaciones a lo largo del codigo  -->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -537,6 +571,8 @@
     </div>
   </section>
 
+  <!-- Aqui la etiqueta tiene un error de tipeo - dice seccion en lugar de section
+     les comento mas sobre esto en el la linea 1271 del scss -->
   <seccion id="clients" class="seccion-clients">
 
       <div class="container">
